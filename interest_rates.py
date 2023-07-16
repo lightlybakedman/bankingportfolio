@@ -13,11 +13,8 @@ def get_central_bank_rate(country: str):
         api_url, headers={"X-Api-Key": APININJAS_KEY}, params=params
     )
     if response.status_code == requests.codes.ok:
-        print(response.json())
+        # print(response.json())
         # print(response.json()["central_bank_rates"][0]["rate_pct"])
         return response.json()["central_bank_rates"][0]["rate_pct"]
     else:
         print("Error:", response.status_code, response.text)
-
-
-print("a")
