@@ -59,7 +59,6 @@ china = RandomAccount("AUD", initial_amount, "China", starting_year)
 
 accounts = [germany, united_states, australia, china]
 
-print("a")  # debugging breakpoint
 
 # plotting
 
@@ -68,7 +67,7 @@ import matplotlib.pyplot as plt
 balances = [list(account.calculate_balance(20).values()) for account in accounts]
 years_list = list(range(starting_year, starting_year + years + 1))
 
-print(balances)
+# print(balances)
 plt.plot(years_list, balances[0], label="Germany")
 plt.plot(years_list, balances[1], label="United States")
 plt.plot(years_list, balances[2], label="Australia")
