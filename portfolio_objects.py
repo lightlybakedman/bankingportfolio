@@ -48,10 +48,10 @@ initial_portfolio = Portfolio(accounts)
 
 def generate_portfolio_over_time(portfolio: Portfolio, years: int):
     values = {0: portfolio}
-    for year in range(1, years):
+    for year in range(1, years + 1):
         portfolio.calculate_balances()
         portfolio.rebalance()
-        print(f"Year {year + 1}: {portfolio.calculate_total_balance()}")
+        print(f"Year {year}: {portfolio.calculate_total_balance()}")
         values[year] = deepcopy(portfolio)
 
 
